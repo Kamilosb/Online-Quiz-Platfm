@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>QuizGenius</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
-    
+
+    <form>
+        <span>Nazwa quizu: <input type="text" id="name"></span> <br>
+        <span>Opis quizu: <input type="text" id="desc"></span> <br>
+        <!-- <span id="">Podaj nazwę quizu: <input type="text"></span> -->
+        <button type="button" onclick="sendQuiz()">Stwórz!</button>
+    </form>
     <script>
-        axios.get('/test')
-        .then(function (response) {
-            // handle success
-            console.log(response);
+        // const axios = require('axios')
+        axios.get('/quiz/all')
+        .then((res) => {
+            console.log(res)
         })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
+
+        function sendQuiz() {
+            const name = document.getElementById('name')
+            const desc = document.getElementById('desc')    
+            const reqBody = {
+                "name": name.value,
+                "description": desc.value
+            }
+            axios.post('/quiz/', reqBody)
+                .then(function (response) {
+                    // handle success
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+        }    
     </script>
-    <!-- <h1>asdasd</h1> -->
+
+
 </body>
+
 </html>
