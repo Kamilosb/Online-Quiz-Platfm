@@ -14,6 +14,7 @@ router.get('/all', async (req, res) => {
     try {
         await Quiz.find().then((allQuizzes) => {
             console.log(allQuizzes)
+            res.send(allQuizzes)
             // res.send()
         })
     } catch (e) {
