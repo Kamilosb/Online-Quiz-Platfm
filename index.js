@@ -14,7 +14,12 @@ const quizRouter = require('./backend/routers/quizRouter.js')
 app.use('/api/quiz', quizRouter)
 
 app.get('/:page', async (req, res) => {
-    res.sendFile(__dirname + `/frontend/` + req.params.page + `.html`)
+    if(req.params.page == 'favicon.ico') {
+        res.sendFile(__dirname + `/frontend/assets/favicon.ico`)
+    } else {
+        res.sendFile(__dirname + `/frontend/` + req.params.page + `.html`)
+    }
+    
 })
 
 app.listen(port, () => {

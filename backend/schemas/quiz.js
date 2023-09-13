@@ -1,5 +1,10 @@
 const mongoose = require('mongoose')
 
+// const typeSchema = new mongoose.Schema({
+//     type: {
+//     }
+// })
+
 const questionSchema = new mongoose.Schema({
     question: String,
     answers: [String]

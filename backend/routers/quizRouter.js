@@ -40,7 +40,6 @@ router.get('/highest', async (req, res) => {
 router.post('/', async (req, res) => {
     const request = req.body
     try { // dodać sprawdzanie
-        // console.log('Tworzenie quizu ', request)
         const newQuiz = await Quiz.create(request)
         res.status(200).send(newQuiz.toJSON())
     } catch (e) {
