@@ -2,11 +2,6 @@ const express = require('express')
 const router = express.Router()
 const Quiz = require('../schemas/quiz')
 
-// router.get('/:id', async (req, res) => {
-//     const quiz = await Quiz.findById(id)
-//     // request to bazy danych
-// })
-
 router.delete('/:id', (req, res) => {
 
 })
@@ -14,22 +9,43 @@ router.delete('/:id', (req, res) => {
 router.get('/all', async (req, res) => {
     try {
         await Quiz.find().then((allQuizzes) => {
-            console.log(allQuizzes)
             res.send(allQuizzes)
         })
     } catch (e) {
         console.log(e)
+        res.status(400).send('Wystąpił błąd, skontaktuj się z administratorem')
     }
 })
+
+router.get('/highest', async (req, res) => {
+    try {
+        await Quiz.find().then((allQuizzes) => {
+            let topQuizzes = []
+            for(let i in allQuizzes) {
+                topQuizzes.push(allQuizzes[i])
+            }   
+            // console.log(topQuizzes[1].rating)    
+            topQuizzes.sort((a, b) => {
+                return b.rating - a.rating
+            })
+            res.status(200).send(topQuizzes.slice(0, 10))
+        })
+    } catch (e) {
+        console.log(e)
+        res.status(400).send('Wystąpił błąd, skontaktuj się z administratorem')
+    }
+})
+
 
 router.post('/', async (req, res) => {
     const request = req.body
     try { // dodać sprawdzanie
         // console.log('Tworzenie quizu ', request)
-        await Quiz.create(request)
-        res.status(200)
+        const newQuiz = await Quiz.create(request)
+        res.status(200).send(newQuiz.toJSON())
     } catch (e) {
-        res.status(400).send(e.toString())
+        console.log(e)
+        res.status(400).send('Wystąpił błąd, skontaktuj się z administratorem')
     }
 })
 

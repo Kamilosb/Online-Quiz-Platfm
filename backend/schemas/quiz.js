@@ -2,18 +2,26 @@ const mongoose = require('mongoose')
 
 const questionSchema = new mongoose.Schema({
     question: String,
-    type: Boolean,
-    answers: {
-        type: String,
-        required: Boolean
-    }
+    answers: [String]
+    // type: String,
+    // answers: {
+    //     type: [String],
+    //     required: Boolean
+    // }
 })
 
 const quizSchema = new mongoose.Schema({
     name: String,
     description: String,
     questions: [questionSchema],
-    author: String
+    author: String,
+    category: [String],
+    rating: {
+        type: Number,
+        min: 1,
+        max: 10
+    }
+
 })
 
 module.exports = mongoose.model("quiz", quizSchema)

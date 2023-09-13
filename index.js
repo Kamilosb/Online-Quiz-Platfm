@@ -14,7 +14,7 @@ const quizRouter = require('./backend/routers/quizRouter.js')
 app.use('/api/quiz', quizRouter)
 
 app.get('/:page', async (req, res) => {
-    res.sendFile(`/frontend/${page}`)
+    res.sendFile(__dirname + `/frontend/` + req.params.page + `.html`)
 })
 
 app.listen(port, () => {
