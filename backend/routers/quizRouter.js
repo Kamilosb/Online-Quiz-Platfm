@@ -10,12 +10,12 @@ const Quiz = require('../schemas/quiz')
 router.delete('/:id', (req, res) => {
 
 })
+
 router.get('/all', async (req, res) => {
     try {
         await Quiz.find().then((allQuizzes) => {
             console.log(allQuizzes)
             res.send(allQuizzes)
-            // res.send()
         })
     } catch (e) {
         console.log(e)

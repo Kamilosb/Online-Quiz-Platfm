@@ -1,17 +1,19 @@
 const mongoose = require('mongoose')
 
-const quizSchema = new mongoose.Schema({
-    name: String,
-    description: String
-    // author: String
+const questionSchema = new mongoose.Schema({
+    question: String,
+    type: Boolean,
+    answers: {
+        type: String,
+        required: Boolean
+    }
 })
 
-
-// {
-//     "name": "Kim z bajki 'kot w butach' byś był?",
-//     "description": "lorem ipsum bla bla bla",
-//     "questions": (objekt json)
-//     "author": "Kamil"
-// }
+const quizSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+    questions: [questionSchema],
+    author: String
+})
 
 module.exports = mongoose.model("quiz", quizSchema)
