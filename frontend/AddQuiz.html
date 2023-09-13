@@ -11,12 +11,13 @@
 
 <body>
 
-<header>
-    
-
-
-</header>
-
+    <form>
+        <p> Dodaj Quizz </p>
+        <span>Nazwa quizu: <input type="text" id="name"></span> <br>
+        <span>Opis quizu: <input type="text" id="desc"></span> <br>
+        <!-- <span id="">Podaj nazwę quizu: <input type="text"></span> -->
+        <button type="button" onclick="sendQuiz()">Stwórz!</button>
+    </form>
     <script>
         // const axios = require('axios')
         axios.get('/quiz/all')
@@ -42,12 +43,6 @@
                 })
         }    
     </script>
-
-<footer>
-
-    <button id="Kontakt">Kontakt</button>
-
-</footer>
 
 </body>
 
