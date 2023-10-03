@@ -1,92 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>QuizGeniusAddQuiz</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-
-<body>
-
-<header>
-    <div id="pasek">
-        <img id="logo" src="assets/logotymczasowe.png">
-        <div id="nawigacja">
-            <ul>
-                <li><a id="popular">Popularne</a></li>
-                <li><a id="category">Kategorie</a></li>
-                <li><input type="text" id="wyszukiwarka"></li>
-                <li><a id="login">Logowanie</a></li>
-            </ul>
-
+<html>
+  <head>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <header>
+        <div class="header">
+          <div class="logo"></div>
+          
+          <div class="header-popularne">Popularne</div>
+          <div class="header-kategorie">Kategorie</div>
+          <div class="header-polecane">Polecane</div>
+          <div class="header-wyszukiwarka-pt1"><div class="header-wyszukiwarka-pt2">Wyszukaj</div></div>
+          <div class="header-logowanie">Logowanie</div>
         </div>
-            <button id="buttonnaw"><p>---</p></button> 
+      </header>
+      <div class="pop-wrapper">
+        <div class="pop">
+          <div class="overlap-group-2">
+            <div class="rectangle"></div>
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-5">quiz popularny</div>
+          </div>
+        </div>
+      </div>
+      <div class="pop-wrapper">
+        <div class="pop">
+          <div class="overlap-group-2">
+            <div class="rectangle"></div>
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-5">quiz popularny</div>
+          </div>
+        </div>
+      </div>
+      <div class="pop-wrapper">
+        <div class="pop">
+          <div class="overlap-group-2">
+            <div class="rectangle"></div>
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-5">quiz popularny</div>
+          </div>
+        </div>
+      </div>
+      <div class="losowe">
+        <div class="overlap-group-wrapper">
+          <div class="overlap-group-3">
+            <div class="img"></div>
+            <div class="rectangle-3"></div>
+            <div class="naj-oceniany">losowe</div>
+          </div>
+        </div>
+        <div class="overlap-wrapper">
+          <div class="overlap-group-3">
+            <div class="img"></div>
+            <div class="rectangle-3"></div>
+            <div class="naj-oceniany">losowe</div>
+          </div>
+        </div>
+      </div>
+      <div class="strony">
+        <div class="div-wrapper"><div class="text-wrapper-6">&gt;</div></div>
+        <div class="overlap-2"><div class="text-wrapper-7">3</div></div>
+        <div class="overlap-3"><div class="text-wrapper-8">2</div></div>
+        <div class="overlap-4"><div class="text-wrapper-9">1</div></div>
+        <div class="overlap-5"><div class="text-wrapper-6">&lt;</div></div>
+      </div>
+      <div class="stopka"><div class="discord">Kontakt</div></div>
     </div>
-
-</header>
-
-<!-- Listy -->
-
-<div id="popularne" class="listy"> 
-    
-</div>
-
-<div id="polecane" class="listy">
-
-</div>
-
-<div id="nowe" class="listy">
-
-</div>
-
-<!-- kafelki -->
-
-<div id="kafelek1" class="kafelek"> 
-    
-</div>
-<div id="kafelek2" class="kafelek"> 
-    
-</div>
-<div id="kafelek3" class="kafelek"> 
-    
-</div>
-
-
-    <!-- <script>
-        // const axios = require('axios')
-        axios.get('/quiz/all')
-        .then((response) => {
-            console.log(response)
-        })
-
-        function sendQuiz() {
-            const name = document.getElementById('name')
-            const desc = document.getElementById('desc')    
-            const reqBody = {
-                "name": name.value,
-                "description": desc.value
-            }
-            axios.post('/quiz/', reqBody)
-                .then(function (response) {
-                    // handle success
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    // handle error
-                    console.log(error);
-                })
-        }    
-    </script> -->
-
-<footer>
-    <div id="footer">
-        <a id="Kontakt">Kontakt</a>
-    </div>
-</footer>
-
-</body>
-
+  </body>
 </html>
