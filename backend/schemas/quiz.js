@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 //     type: {
 //     }
 // })
+// TODO: dodać schema do rodzaju pytań (np. true/false, lista odpowiedzi, poprawne odpowiedzi, % osób które wybrały daną odpowiedź (czyli coś typu ankieta))
 
 const questionSchema = new mongoose.Schema({
     question: String,

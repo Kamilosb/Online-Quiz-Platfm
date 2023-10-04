@@ -3,12 +3,17 @@ Projekt na lekcje wykonywany uzywając:
     - nodejs
     - express
     - jwt authtoken
+    - php
 - frontend:
     - axios
     - html i css
 
 ========================================
-Dokumentacja API backendowego (bardzo profesjonalna):
+
+<span>Projekt można podejrzeć pod <a href="whole-hornet-usually.ngrok-free.app">tym linkiem</a>. Ze względu na koszty hostowania nie jest on dostępny 24/7</span>
+
+========================================
+## Dokumentacja API
 
 GET /api/quiz/:id <- zwraca quiz o wybranym id
 DELETE /api/quiz/:id <- usuwa quiz o wybranym id (dodać sprawdzanie czy dana osoba jest właścicielem)
