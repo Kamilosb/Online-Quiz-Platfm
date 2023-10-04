@@ -140,7 +140,21 @@ header {
   height: 350px;
 }
 
-.overlap-group-2 {
+.popularne-1 {
+  position: relative;
+  width: 1450px;
+  height: 350px;
+  background-color: #ffffff;
+}
+
+.popularne-2 {
+  position: relative;
+  width: 1450px;
+  height: 350px;
+  background-color: #ffffff;
+}
+
+.popularne-3 {
   position: relative;
   width: 1450px;
   height: 350px;
@@ -161,8 +175,8 @@ header {
   position: absolute;
   width: 242px;
   height: 198px;
-  top: 61px;
-  left: 92px;
+  top: 5%;
+  left: 5%;
   background-color: #a09090;
   border-radius: 15px;
 }
@@ -170,8 +184,8 @@ header {
 .text-wrapper-5 {
   position: absolute;
   width: 153px;
-  top: 267px;
-  left: 148px;
+  bottom: 5%;
+  left: 25%;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
