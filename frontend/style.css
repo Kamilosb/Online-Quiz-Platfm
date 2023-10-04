@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  height: 2531.5px;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+  background-color: #b7b7b7;
+  overflow: hidden;
+}
+
+
+
+/* HEADER */
+
+
+
+header {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 150px;
+  margin-right: -10px;
+  background-color: transparent;
+}
+
+.header {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.header-popularne {
+  position: absolute;
+  width: 127px;
+  top: 63px;
+  left: 552px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.header-kategorie {
+  position: absolute;
+  width: 126px;
+  top: 63px;
+  left: 846px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.header-polecane {
+  position: absolute;
+  width: 126px;
+  top: 63px;
+  left: 1139px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.header-wyszukiwarka-pt1 {
+  position: absolute;
+  width: 202px;
+  height: 40px;
+  top: 55px;
+  left: 1391px;
+  background-color: #d9d9d9;
+}
+
+.header-wyszukiwarka-pt2 {
+  position: absolute;
+  width: 94px;
+  top: 8px;
+  left: 53px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #787878;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.header-logowanie {
+  position: absolute;
+  width: 127px;
+  top: 63px;
+  left: 1727px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.logo {
+  position: absolute;
+  width: 99px;
+  height: 100px;
+  top: 30px;
+  left: 33px;
+  background-color: #d9d9d9;
+}
+
+.pop-wrapper {
+  position: relative;
+  width: 1450px;
+  height: 350px;
+}
+
+
+
+/* POPULARNE */
+
+
+
+.pop {
+  width: 1452px;
+  height: 350px;
+}
+
+.overlap-group-2 {
+  position: relative;
+  width: 1450px;
+  height: 350px;
+  background-color: #ffffff;
+}
+
+.rectangle {
+  position: absolute;
+  width: 272px;
+  height: 262px;
+  top: 44px;
+  left: 77px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+}
+
+.rectangle-2 {
+  position: absolute;
+  width: 242px;
+  height: 198px;
+  top: 61px;
+  left: 92px;
+  background-color: #a09090;
+  border-radius: 15px;
+}
+
+.text-wrapper-5 {
+  position: absolute;
+  width: 153px;
+  top: 267px;
+  left: 148px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.losowe {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 200px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.overlap-group-wrapper {
+  position: relative;
+  width: 587.5px;
+  height: 585.5px;
+}
+
+.overlap-group-3 {
+  width: 586px;
+  height: 586px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.img {
+  position: absolute;
+  background-color: #d9d9d9;
+  width: 500px;
+  height: 500px;
+  top: 42px;
+  left: 38px;
+  border-radius: 15px;
+}
+
+.rectangle-3 {
+  position: absolute;
+  background-color: #a09090;
+  width: 400px;
+  height: 350px;
+  top: 90px;
+  left: 80px;
+  border-radius: 15px;
+}
+
+.naj-oceniany {
+  position: absolute;
+  width: 106px;
+  top: 466px;
+  left: 234px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.overlap-wrapper {
+  position: relative;
+  width: 587.5px;
+  height: 585.5px;
+  margin-right: -2px;
+}
+
+.strony {
+  position: relative;
+  width: 400px;
+  height: 60px;
+  background-color: #ffffff;
+}
+
+.div-wrapper {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 12px;
+  left: 343px;
+  background-color: #d9d9d9;
+}
+
+.text-wrapper-6 {
+  position: absolute;
+  width: 14px;
+  top: 5px;
+  left: 11px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.overlap-2 {
+  position: absolute;
+  width: 37px;
+  height: 36px;
+  top: 12px;
+  left: 262px;
+  background-color: #d9d9d9;
+}
+
+.text-wrapper-7 {
+  position: absolute;
+  width: 12px;
+  top: 5px;
+  left: 12px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.overlap-3 {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 12px;
+  left: 182px;
+  background-color: #d9d9d9;
+}
+
+.text-wrapper-8 {
+  width: 13px;
+  left: 10px;
+  position: absolute;
+  top: 5px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.overlap-4 {
+  position: absolute;
+  width: 37px;
+  height: 36px;
+  top: 12px;
+  left: 101px;
+  background-color: #d9d9d9;
+}
+
+.text-wrapper-9 {
+  width: 10px;
+  left: 13px;
+  position: absolute;
+  top: 5px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.overlap-5 {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 12px;
+  left: 21px;
+  background-color: #d9d9d9;
+}
+
+.stopka {
+  position: relative;
+  width: 1920px;
+  height: 86px;
+  margin-left: -10.5px;
+  margin-right: -10.5px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.discord {
+  position: absolute;
+  width: 75px;
+  top: 32px;
+  left: 1743px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
