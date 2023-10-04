@@ -12,3 +12,6 @@ function addNewBox(title) {
 }
 
 addNewBox('UIASDGASd')
+addNewBox('yt 5yt54etyher')
+addNewBox('asdasdasfa')
+addNewBox('9u32rhnfdefibnewfewfnewdasdasdnfuen')
