@@ -19,7 +19,10 @@ app.get('/:page', async (req, res) => {
     } else {
         res.sendFile(__dirname + `/frontend/` + req.params.page + `.html`)
     }
-    
+    // else if(req.params.page == "login") {
+    //     res.sendFile(__dirname + `/frontend/` + req.params.page + `.php`)
+    //     // res.sendFile(__dirname + `/backend/` + req.params.page + `.php`)
+    // } 
 })
 
 app.listen(port, () => {

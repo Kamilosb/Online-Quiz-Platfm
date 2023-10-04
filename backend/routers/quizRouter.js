@@ -3,8 +3,10 @@ const router = express.Router()
 const Quiz = require('../schemas/quiz')
 
 router.delete('/:id', (req, res) => {
-
+    //TODO: zrobić 
 })
+
+//TODO: zrobić zwracanie wybranego quizu
 
 router.get('/all', async (req, res) => {
     try {
@@ -23,8 +25,7 @@ router.get('/highest', async (req, res) => {
             let topQuizzes = []
             for(let i in allQuizzes) {
                 topQuizzes.push(allQuizzes[i])
-            }   
-            // console.log(topQuizzes[1].rating)    
+            }     
             topQuizzes.sort((a, b) => {
                 return b.rating - a.rating
             })
@@ -35,7 +36,6 @@ router.get('/highest', async (req, res) => {
         res.status(400).send('Wystąpił błąd, skontaktuj się z administratorem')
     }
 })
-
 
 router.post('/', async (req, res) => {
     const request = req.body
