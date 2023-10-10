@@ -26,8 +26,8 @@ function addNewBox(category, title, image) {
     category.innerHTML += `${newBox}`
 }
 
-addNewBox('popularne', 'HASDIHAS1273163')
-addNewBox('polecane', '111111111111')
+addNewBox('popularne', 'HASDIHAS1dsdsd273dsdsdsdsdsdsdsds163')
+addNewBox('polecane', '111111dsd')
 addNewBox('polecane', '22222222222222222')
 
 addNewBox('najoceniane', 'AAAAAAAAAAAAA')

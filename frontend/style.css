@@ -164,6 +164,8 @@ header {
   width: 1450px;
   height: 350px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
 }
 
 .najoceniane {
@@ -171,6 +173,8 @@ header {
   width: 1450px;
   height: 350px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
 }
 
 .rectangle {
@@ -183,6 +187,7 @@ header {
   border-radius: 15px;
   margin-right: 70px;
   align-content: center;
+  overflow: hidden;
 }
 
 .rectangle-2 {
@@ -197,7 +202,6 @@ header {
 
 .text-wrapper-5 {
   position: relative;
-  max-width: 272px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -206,8 +210,25 @@ header {
   line-height: normal;
   white-space: nowrap;
   margin-top: 25px;
-  overflow: auto;
+	animation: slide 10s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite both;
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(5%);
+  }
+  50% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(5%);
+  }
+}
+
+
+/* LOSOWE */
+
+
 
 .losowe {
   display: inline-flex;
@@ -218,12 +239,6 @@ header {
   flex: 0 0 auto;
 }
 
-.overlap-group-wrapper {
-  position: relative;
-  width: 587.5px;
-  height: 585.5px;
-}
-
 .overlap-group-3 {
   width: 586px;
   height: 586px;
@@ -231,7 +246,18 @@ header {
   background-color: #ffffff;
 }
 
-.img {
+.imgwlos {
+  position: absolute;
+  background-color: #a09090;
+  width: 400px;
+  height: 350px;
+  top: 90px;
+  left: 80px;
+  border-radius: 15px;
+
+}
+
+.rectangle-3 {
   position: absolute;
   background-color: #d9d9d9;
   width: 500px;
@@ -241,17 +267,7 @@ header {
   border-radius: 15px;
 }
 
-.rectangle-3 {
-  position: absolute;
-  background-color: #a09090;
-  width: 400px;
-  height: 350px;
-  top: 90px;
-  left: 80px;
-  border-radius: 15px;
-}
-
-.naj-oceniany {
+.textwlos {
   position: absolute;
   width: 106px;
   top: 466px;
