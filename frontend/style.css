@@ -144,24 +144,13 @@ header {
   background-color: #d9d9d9;
 }
 
-.pop-wrapper {
-  position: relative;
-  width: 1450px;
-  height: 350px;
-}
-
 
 
 /* POPULARNE */
 
 
 
-.pop {
-  width: 1452px;
-  height: 350px;
-}
-
-.popularne-1 {
+.popularne {
   position: relative;
   width: 1450px;
   height: 350px;
@@ -177,7 +166,7 @@ header {
   background-color: #ffffff;
 }
 
-.popularne-3 {
+.najoceniane {
   position: relative;
   width: 1450px;
   height: 350px;
@@ -198,9 +187,9 @@ header {
 
 .rectangle-2 {
   position: relative;
-  margin: auto;
   width: 242px;
   height: 198px;
+  margin-left: 5%;
   top: 5%;
   background-color: #a09090;
   border-radius: 15px;
