@@ -3,15 +3,35 @@
 //             console.log(response)
 //         })
 
-let pop = document.getElementsByClassName('popularne-1')
+let popularne = document.getElementsByClassName('popularne')
+let polecane = document.getElementsByClassName('polecane')
+let najoceniane = document.getElementsByClassName('najoceniane')
 
-function addNewBox(title) {
+// popularne, polecane, najoceniane
+function addNewBox(category, title, image) {
+    switch(category) {
+        case 'popularne':
+            category = popularne[0]
+            break
+        case 'polecane':
+            category = polecane[0]
+            break
+        case 'najoceniane':
+            category = najoceniane[0]
+            break
+    }
+    // console.log(polecane[0].innerHTML)
     const newBox = `<div class="rectangle">\n<div class="rectangle-2"></div>\n<div class="text-wrapper-5">${title}</div>`
-    console.log(pop[0].innerHTML)
-    pop[0].innerHTML += `${newBox}`
+    // console.log(category.innerHTML)
+    category.innerHTML += `${newBox}`
 }
 
-addNewBox('UIASDGASd')
-addNewBox('yt 5yt54etyher')
-addNewBox('asdasdasfa')
-addNewBox('9u32rhnfdefibnewfewfnewdasdasdnfuen')
+addNewBox('popularne', 'HASDIHAS1273163')
+addNewBox('polecane', '111111111111')
+addNewBox('polecane', '22222222222222222')
+
+addNewBox('najoceniane', 'AAAAAAAAAAAAA')
+
+// addNewBox('polecane', '73273897ASDHJGASDJHGA')
+
+// console.log(popularne)
