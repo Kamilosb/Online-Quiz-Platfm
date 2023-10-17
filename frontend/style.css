@@ -210,18 +210,21 @@ header {
   line-height: normal;
   white-space: nowrap;
   margin-top: 25px;
-	animation: slide 10s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite both;
+  margin-left: 10px;
+  margin-right: 10px;
+	animation: slide 7s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite both;
+  max-width: 272px;
 }
 
 @keyframes slide {
   0% {
-    transform: translateX(5%);
+    transform: translateX(0);
   }
   50% {
-    transform: translateX(-40%);
+    transform: translateX(-58%);
   }
   100% {
-    transform: translateX(5%);
+    transform: translateX(0);
   }
 }
 
