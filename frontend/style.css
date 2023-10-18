@@ -26,7 +26,6 @@
 .frame {
   display: flex;
   flex-direction: column;
-  height: 2531.5px;
   align-items: center;
   gap: 100px;
   position: relative;
@@ -47,9 +46,6 @@ header {
   height: 150px;
   margin-right: -10px;
   background-color: transparent;
-}
-
-.header {
   width: 100%;
   height: 150px;
   position: relative;
@@ -209,26 +205,32 @@ header {
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: 10px;
   margin-right: 10px;
-  animation: slide 10s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite both;
-  min-width: 10px;
-  max-width: 265px;
+  padding-top: 10px;
+  min-height: 30px;
+  min-width: 30px;
+  max-width: 250px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-text-select: none;
+  -webkit-user-select: none;
+}
+
+.text-wrapper-5:hover {
+  animation: slide 6s infinite both;
 }
 
 @keyframes slide {
   0% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX();
+    transform: translateX(120%);
   }
 
   100% {
-    transform: translateX(0);
+    transform: translateX(-120%);
   }
+
 }
 
 
@@ -410,10 +412,11 @@ header {
   position: relative;
   width: 1920px;
   height: 86px;
+  padding: -10px;
   margin-left: -10.5px;
   margin-right: -10.5px;
   background-color: #ffffff;
-  border: 1px solid;
+  border-top: 1px solid;
   border-color: #000000;
 }
 
