@@ -11,9 +11,8 @@ router.post('/register', async (req, res) => {
     } else {
         const name = await Account.find({login: login})
         console.log(name)
-        // if() {
-        res.status
-        // }
+        // res.status
+
 
         const newAccount = await Account.create({
             login: login,
