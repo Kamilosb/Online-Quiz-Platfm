@@ -203,8 +203,6 @@ header {
   color: #000000;
   font-size: 20px;
   letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
   margin-top: 15px;
   margin-left: 10px;
   margin-right: 10px;
@@ -216,18 +214,20 @@ header {
   -moz-user-select: none;
   -webkit-text-select: none;
   -webkit-user-select: none;
+  cursor: default;
 }
 
 .text-wrapper-5:hover {
   animation: slide 6s infinite both;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slide {
-  0% {
+  from {
     transform: translateX(120%);
   }
 
-  100% {
+  to {
     transform: translateX(-120%);
   }
 
@@ -239,12 +239,12 @@ header {
 
 
 .losowe {
+  position: relative;
   display: inline-flex;
   align-items: flex-start;
   justify-content: center;
   gap: 200px;
-  position: relative;
-  flex: 0 0 auto;
+  flex-wrap: wrap;
 }
 
 .overlap-group-3 {
