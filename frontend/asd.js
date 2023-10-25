@@ -9,7 +9,7 @@ let najoceniane = document.getElementsByClassName('najoceniane')
 
 // popularne, polecane, najoceniane
 function addNewBox(category, title, image) {
-    switch(category) {
+    switch (category) {
         case 'popularne':
             category = popularne[0]
             break
@@ -21,7 +21,7 @@ function addNewBox(category, title, image) {
             break
     }
     // console.log(polecane[0].innerHTML)
-    const newBox = `<div class="rectangle">\n<div class="rectangle-2"></div>\n<div class="text-wrapper-5">${title}</div>`
+    const newBox = `<div class="rectangle">\n<div class="rectangle-2"></div>\n<div class="text-wrapper-5"><a href="" class="tooltip">${title}<span>${title}</span><a></div>`
     // console.log(category.innerHTML)
     category.innerHTML += `${newBox}`
 }

@@ -183,7 +183,6 @@ header {
   border-radius: 15px;
   margin-right: 70px;
   align-content: center;
-  overflow: hidden;
 }
 
 .rectangle-2 {
@@ -210,27 +209,38 @@ header {
   min-height: 30px;
   min-width: 30px;
   max-width: 250px;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-text-select: none;
-  -webkit-user-select: none;
-  cursor: default;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.text-wrapper-5:hover {
-  animation: slide 6s infinite both;
-  animation-fill-mode: forwards;
+a.tooltip {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px;
+  text-decoration: none;
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(120%);
-  }
+a.tooltip:hover {
+  cursor: help;
+  position: relative;
+}
 
-  to {
-    transform: translateX(-120%);
-  }
+a.tooltip span {
+  display: none;
+}
 
+a.tooltip:hover span {
+  border: solid black 2px;
+  padding: 5px 20px 5px 5px;
+  display: block;
+  z-index: 100;
+  background: #e4e4e4;
+  left: -10px;
+  width: 300px;
+  position: absolute;
+  top: 35px;
+  text-decoration: none;
 }
 
 
@@ -296,115 +306,12 @@ header {
   margin-right: -2px;
 }
 
-.strony {
-  position: relative;
-  width: 400px;
-  height: 60px;
-  background-color: #ffffff;
-}
-
 .div-wrapper {
   position: absolute;
   width: 36px;
   height: 36px;
   top: 12px;
   left: 343px;
-  background-color: #d9d9d9;
-}
-
-.text-wrapper-6 {
-  position: absolute;
-  width: 14px;
-  top: 5px;
-  left: 11px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.overlap-2 {
-  position: absolute;
-  width: 37px;
-  height: 36px;
-  top: 12px;
-  left: 262px;
-  background-color: #d9d9d9;
-}
-
-.text-wrapper-7 {
-  position: absolute;
-  width: 12px;
-  top: 5px;
-  left: 12px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.overlap-3 {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  top: 12px;
-  left: 182px;
-  background-color: #d9d9d9;
-}
-
-.text-wrapper-8 {
-  width: 13px;
-  left: 10px;
-  position: absolute;
-  top: 5px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.overlap-4 {
-  position: absolute;
-  width: 37px;
-  height: 36px;
-  top: 12px;
-  left: 101px;
-  background-color: #d9d9d9;
-}
-
-.text-wrapper-9 {
-  width: 10px;
-  left: 13px;
-  position: absolute;
-  top: 5px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.overlap-5 {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  top: 12px;
-  left: 21px;
   background-color: #d9d9d9;
 }
 
@@ -432,4 +339,201 @@ header {
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+}
+
+/* ZMIANA STRONY */
+
+
+.pagination-wrapper {
+  font-size: 0;
+  position: absolute;
+  bottom: 125px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes pagination-container--animation-prev {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(18px);
+  }
+}
+
+@keyframes pagination-container--animation-next {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-18px);
+  }
+}
+
+.transition-prev .pagination-container {
+  animation: pagination-container--animation-prev 0.3s forwards;
+}
+
+.transition-next .pagination-container {
+  animation: pagination-container--animation-next 0.3s forwards;
+}
+
+.little-dot {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6px;
+  position: relative;
+  z-index: 10;
+}
+
+.little-dot--first,
+.little-dot--last {
+  z-index: 5;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-18px);
+  }
+}
+
+.transition-prev .little-dot--first {
+  animation: slideLeft 0.4s 0.3s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes little-dot--first--animation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.transition-next .little-dot--first {
+  animation: little-dot--last--animation 0.3s forwards;
+}
+
+
+@keyframes little-dot--last--animation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.transition-prev .little-dot--last {
+  animation: little-dot--last--animation 0.3s forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(18px);
+    opacity: 1;
+  }
+}
+
+.transition-next .little-dot--last {
+  animation: slideRight 0.4s 0.3s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.big-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #8d6c6c;
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+}
+
+.transition-next .big-dot {
+  right: auto;
+  left: -6px;
+}
+
+.big-dot-container {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.transition-next .big-dot-container {
+  right: auto;
+  left: 3px;
+}
+
+@keyframes big-dot-container--animation-prev {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(-179deg);
+  }
+}
+
+@keyframes big-dot-container--animation-next {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(-181deg);
+  }
+}
+
+.transition-prev .big-dot-container {
+  animation: big-dot-container--animation-prev 0.3s forwards;
+}
+
+.transition-next .big-dot-container {
+  animation: big-dot-container--animation-next 0.3s forwards;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+.btn--next {
+  left: calc(100% + 20px);
+}
+
+.btn--prev {
+  right: calc(100% + 20px);
 }
