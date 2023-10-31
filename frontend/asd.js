@@ -21,12 +21,14 @@ function addNewBox(category, title, image) {
             break
     }
     // console.log(polecane[0].innerHTML)
-    const newBox = `<div class="rectangle">\n<div class="rectangle-2"></div>\n<div class="text-wrapper-5"><a href="" class="tooltip">${title}<span>${title}</span><a></div>`
+    const newBox = `<div class="rectangle">\n
+    <div class="rectangle-2"></div>\n
+    <div class="text-wrapper-5"><a href="" class="tooltip">${title}<span>${title}</span></a></div>`
     // console.log(category.innerHTML)
     category.innerHTML += `${newBox}`
 }
 
-addNewBox('popularne', 'HASDIHAS1dsdsd27sdsds163')
+addNewBox('popularne', 'HASDIHAS1dsdsd27sdsds163f')
 addNewBox('polecane', '111111dsd')
 addNewBox('polecane', '22222222222222222')
 
