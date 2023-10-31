@@ -23,22 +23,26 @@
         <div class="header-logowanie">Logowanie</div>
       </div>
       </header>
-    <p>DODWANIE QUIZU</p>
 
+    <h2>DODAWANIE QUIZU</h2>
     <div class="addquiz">
         <form>
-            <span> Dodaj Quizz </span> <br>
             <span>Nazwa quizu: <input type="text" id="name"></span> <br>
             <span>Opis quizu: <input type="text" id="desc"></span> <br>
-            <!-- <span id="">Podaj nazwę quizu: <input type="text"></span> -->
+            <div class="addpytanie"><input type="text"></div>
+        <div class="odpowiedzi">
+            <div class="odp1"><input type="text"></div>
+            <div class="odp2"><input type="text"></div>
+            <div class="odp3"><input type="text"></div>
+            <div class="odp4"><input type="text"></div>
+        </div>
             <button type="button" onclick="sendQuiz()">Stwórz!</button>
         </form>
     </div>
         <div class="stopka">
             <div class="discord">Kontakt</div>
-          </div>
+        </div>
     </div>
-</div>
 
 <script src="create.js"></script>
 </body>

@@ -336,6 +336,12 @@ a.tooltip:hover span {
   background-color: #d9d9d9;
 }
 
+
+
+/* STOPKA */
+
+
+
 .stopka {
   position: relative;
   width: 100%;
@@ -565,10 +571,69 @@ a.tooltip:hover span {
 
 /* DODAWANIE QUIZU */
 
+span {
+  margin-left: 20px;
+}
 
 .addquiz{
   background-color: #a09090;
-  height: 100px;
+  height: 550px;
+  width: 600px;
+  padding: 20px 20px 50px 0px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.addquiz input{
+  width: 200px;
+}
+
+.addpytanie{
+  border-radius: 15px;
+  background-color: #555;
+  width: 580px;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.addpytanie span{
+  width: 70px;
+}
+
+.addpytanie input{
+  margin: 10px;
+  width: 550px;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.odpowiedzi{
+  background-color: #787878;
+  border-radius: 15px;
+  width: 580px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:  40px;
+  margin-top: 10px;
+  margin-left: auto;
+}
+.odp1, .odp2, .odp3, .odp4{
+  border-radius: 10px;
+  background-color: #3e8e41;
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+
+.addquiz button{
+  border: 2px solid black;
+  border-radius: 10px;
   width: 150px;
-  padding: 50px;
+  height: 40px;
+  margin-top: 40px;
+  margin-left: 35%;
 }
