@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <div class="frame">
     <header>
         <div class="logo"></div>
       <div class="header">
@@ -26,23 +25,25 @@
 
     <h2>DODAWANIE QUIZU</h2>
     <div class="addquiz">
-        <form>
-            <span>Nazwa quizu: <input type="text" id="name"></span> <br>
-            <span>Opis quizu: <input type="text" id="desc"></span> <br>
-            <div class="addpytanie"><input type="text"></div>
+        <form id="form">
+            <span class="oquiz"><h4 class="oquizs">Nazwa quizu:</h4><input type="text" id="name" class="nazwanowego"></span>
+            <span class="oquiz"><h4 class="oquizs">Opis quizu:</h4><input type="text" id="desc" class="opisnowego"></span>
         <div class="odpowiedzi">
-            <div class="odp1"><input type="text"></div>
-            <div class="odp2"><input type="text"></div>
-            <div class="odp3"><input type="text"></div>
-            <div class="odp4"><input type="text"></div>
+            <div class="addpytanie"><h4>Podaj pytanie:</h4><input class="question" type="text"></div>
+            <div class="odp1"><h4>ODPOWIEDŹ 1</h4><input class="answer1" type="text"></div>
+            <div class="odp2"><h4>ODPOWIEDŹ 2</h4><input class="answer2" type="text"></div>
+            <div class="odp3"><h4>ODPOWIEDŹ 3</h4><input class="answer3" type="text"></div>
+            <div class="odp4"><h4>ODPOWIEDŹ 4</h4><input class="answer4" type="text"></div>
         </div>
-            <button type="button" onclick="sendQuiz()">Stwórz!</button>
         </form>
+        <div class="przyciski">
+            <button type="button" onclick="addQuizQuestion()" class="button"><h4>Dodaj pytanie</h4></button>
+            <button type="button" onclick="sendQuiz()" class="button"><h4>Stwórz!</h4></button>
+        </div>
     </div>
         <div class="stopka">
             <div class="discord">Kontakt</div>
         </div>
-    </div>
 
 <script src="create.js"></script>
 </body>
