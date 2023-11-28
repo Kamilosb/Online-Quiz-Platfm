@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Quiz = require('../schemas/quiz')
+
 router.delete('/:id', async (req, res) => {
     try {
         await Quiz.findByIdAndDelete(id)
@@ -9,8 +10,6 @@ router.delete('/:id', async (req, res) => {
         res.status(500).send('Wystąpił błąd, skontaktuj się z administratorem')
     }
 })
-
-//TODO: zrobić zwracanie wybranego quizu
 
 router.get('/:id', async(req, res) => {
     try {
@@ -29,6 +28,28 @@ router.get('/all', async (req, res) => {
         })
     } catch (e) {
         res.status(500).send('Wystąpił błąd, skontaktuj się z administratorem')
+    }
+})
+
+router.post('/random', async (req, res) => {
+    const count = req.body.count
+    try {
+        const documentCount = await Quiz.countDocuments()
+        let randomQuizArray = []
+
+        if(count > 9 || documentCount <= count) {
+            res.status(300).send('Podana liczba jest za duża')
+            return
+        }
+
+        for(let i in count) {
+            let random = Math.floor(Math.random() * count)
+            randomQuizArray.push(await Quiz.findOne().skip(random))
+        }
+        res.send(randomQuizArray)
+    } catch (e) {
+        console.log(e)
+        res.send(e)
     }
 })
 

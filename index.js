@@ -16,6 +16,8 @@ app.use('/api/quiz', quizRouter)
 app.get('/:page', async (req, res) => {
     if(req.params.page == 'favicon.ico') {
         res.sendFile(__dirname + `/frontend/assets/favicon.ico`)
+    } else if(req.params.page == 'robots.txt') {
+        res.sendFile(__dirname + '/frontend/robots.txt')
     } else {
         res.sendFile(__dirname + `/frontend/` + req.params.page + `.html`)
     }
