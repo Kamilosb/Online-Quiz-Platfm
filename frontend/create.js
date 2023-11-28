@@ -10,7 +10,7 @@ axios.get('/quiz/all')
 
 function addQuizQuestion() {
     let odp = document.getElementById('form')
-    const quizElement = '<div class="odpowiedzi"><div class="addpytanie"><h4>Podaj pytanie:</h4><input class="question" type="text"></div><div class="odp1"><h4>ODPOWIEDŹ 1</h4><input class="answer1" type="text"></div><div class="odp2"><h4>ODPOWIEDŹ 2</h4><input class="answer2" type="text"></div><div class="odp3"><h4>ODPOWIEDŹ 3</h4><input class="answer3" type="text"></div><div class="odp4"><h4>ODPOWIEDŹ 4</h4><input class="answer4" type="text"></div></div>'
+    const quizElement = '<div class="odpowiedzi"><div class="addpytanie"><h4>Podaj pytanie:</h4><input class="question" type="text"></div><div class="odp"><h4>ODPOWIEDŹ 1</h4><input class="answer1" type="text"></div><div class="odp"><h4>ODPOWIEDŹ 2</h4><input class="answer2" type="text"></div><div class="odp"><h4>ODPOWIEDŹ 3</h4><input class="answer3" type="text"></div><div class="odp"><h4>ODPOWIEDŹ 4</h4><input class="answer4" type="text"></div></div>'
     const newElement = document.createElement("div")
     newElement.innerHTML += quizElement
     odp.appendChild(newElement)
