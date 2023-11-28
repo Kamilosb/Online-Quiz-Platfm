@@ -14,7 +14,7 @@ function btnClick() {
         paginationWrapper.classList.add('transition-next');
     }
 
-    var timeout = setTimeout(cleanClasses, 500);
+    setTimeout(cleanClasses, 500);
 }
 
 function cleanClasses() {
