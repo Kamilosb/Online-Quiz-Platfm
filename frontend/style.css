@@ -35,7 +35,10 @@ body {
 
 /* HEADER */
 
-
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
 header {
   position: relative;
@@ -56,23 +59,6 @@ header {
   margin-top: 45px;
 }
 
-.header-createquiz {
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 17px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-  padding: 15px 20px;
-  transition: 0.3s;
-}
-
-.header-createquiz:hover {
-  background-color: #3e8e41;
-  color: white;
-}
-
 .header-kategorie {
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
@@ -83,38 +69,77 @@ header {
   white-space: nowrap;
   padding: 15px 20px;
   transition: 0.3s;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .header-kategorie:hover {
   background-color: #3e8e41;
   color: white;
 }
-
-.header-wyszukiwarka-pt1 {
-  padding: 0px 30px;
-  background-color: #d9d9d9;
-  transition: 0.3s;
-}
-
-.header-wyszukiwarka-pt1:hover {
-  background-color: #3e8e41;
-  color: white;
-
-  .header-wyszukiwarka-pt2 {
-    color: white;
-  }
-}
-
-.header-wyszukiwarka-pt2 {
+.header-createquiz {
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #787878;
+  color: #000000;
   font-size: 17px;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
   padding: 15px 20px;
   transition: 0.3s;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.header-createquiz:hover {
+  background-color: #3e8e41;
+  color: white;
+}
+
+.header-wyszukiwarka {
+  background-color: #d9d9d9;
+  transition: 0.3s;
+  border: 1px solid black;
+}
+
+.header-wyszukiwarka:hover {
+  background-color: #3e8e41;
+  color: white;
+
+  input::placeholder{
+    color: white;
+  }
+}
+
+.header-wyszukiwarka:focus {
+  background-color: #3e8e41;
+  color: white;
+
+  input::placeholder{
+    color: white;
+  }
+}
+
+.header-wyszukiwarka {
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+input.header-wyszukiwarka{
+  padding: auto;
+}
+
+input.header-wyszukiwarka::placeholder{
+  position: absolute;
+  left: 70px;
 }
 
 .header-logowanie {
@@ -127,6 +152,8 @@ header {
   white-space: nowrap;
   padding: 15px 20px;
   transition: 0.3s;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .header-logowanie:hover {
@@ -142,6 +169,8 @@ header {
   left: 25px;
   background-color: #d9d9d9;
 }
+
+
 
 
 
@@ -354,8 +383,10 @@ a.tooltip:hover span {
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
-  padding: 15px 20px;
+  padding: 15px 5px 15px 20px;
   transition: 0.3s;
+  border: 1px solid black;
+  border-radius: 15px;
 }
 
 .discord:hover {
@@ -593,10 +624,12 @@ form {
 }
 
 .addpytanie input {
+  max-width: 660px;
   margin: 10px;
   width: 640px;
   height: 150px;
   border-radius: 10px;
+  overflow: scroll;
 }
 
 .odpowiedzi {
@@ -661,7 +694,7 @@ form {
   margin-top: 10px;
 }
 
-input[type=text] {
+.addquiz input[type=text] {
   background-color: #3e8e41;
   border-radius: 10px;
   border: solid black 1px;
@@ -673,4 +706,14 @@ input[type=text] {
   flex-direction: column;
   align-items: center;
   padding: 10px;
+}
+
+/* LOGOWANIE */
+
+.logowanie {
+  background-color: #a09090;
+  width: 700px;
+  padding: 20px 20px 20px 0px;
+  border-radius: 15px;
+  font-size: 17px;
 }
