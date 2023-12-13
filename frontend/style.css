@@ -601,7 +601,7 @@ form {
   flex-direction: column;
 }
 
-.addquiz {
+.addquiz, .logowanie{
   background-color: #a09090;
   width: 700px;
   padding: 20px 20px 20px 0px;
@@ -694,14 +694,14 @@ form {
   margin-top: 10px;
 }
 
-.addquiz input[type=text] {
+.addquiz input[type=text], .logowanie input[type=text]{
   background-color: #3e8e41;
   border-radius: 10px;
   border: solid black 1px;
   text-align: center;
 }
 
-.oquiz {
+.oquiz, .login, .haslo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -709,11 +709,3 @@ form {
 }
 
 /* LOGOWANIE */
-
-.logowanie {
-  background-color: #a09090;
-  width: 700px;
-  padding: 20px 20px 20px 0px;
-  border-radius: 15px;
-  font-size: 17px;
-}
